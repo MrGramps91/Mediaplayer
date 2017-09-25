@@ -46,6 +46,7 @@ public class MediaBar extends HBox{
 		getChildren().add(vol);
 		
 		
+	//Adds the function to pause and play the video//	
 		playButton.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent e) {
 				Status status = player.getStatus();
@@ -68,6 +69,7 @@ public class MediaBar extends HBox{
 			}
 		});
 		
+		//Allows the media bar to read the video in current time//
 		player.currentTimeProperty().addListener(new InvalidationListener(){
 			public void invalidated(Observable ov) {
 				updateValues();
@@ -75,6 +77,7 @@ public class MediaBar extends HBox{
 			
 		});
 		
+		// Allows the media bar to skip through the video//
 		time.valueProperty().addListener(new InvalidationListener(){
 			public void invalidated(Observable ov) {
 				if(time.isPressed()){
@@ -85,6 +88,7 @@ public class MediaBar extends HBox{
 			
 		});
 		
+		// Allows the media bar to control the volume of the video //
 		vol.valueProperty().addListener(new InvalidationListener(){
 			public void invalidated(Observable ov) {
 				if(vol.isPressed()){
@@ -96,7 +100,7 @@ public class MediaBar extends HBox{
 
 		
 		}
-	
+	// reads the videos runtime in milliseconds //
 	protected void updateValues() {
 		Platform.runLater(new Runnable(){
 			public void run() {
