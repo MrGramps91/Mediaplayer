@@ -12,8 +12,8 @@ import javafx.scene.paint.Color;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
-		Player player = new Player("file:///C:/");
-		Scene scene = new Scene(player, 720, 480, Color.BLACK);
+		Player player = new Player("file:///C:/"); //used temporarily until a 'file select option is incorporated//
+		Scene scene = new Scene(player,1280,760, Color.BLACK); //used temporarily until 'automatic video scaling is incorporated//
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
