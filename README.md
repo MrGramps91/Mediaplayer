@@ -10,3 +10,6 @@ This is s a simple media player tool created in java using the java fx packages
   - in 'Main.java' set video format to a static 1280x760 / added 40 more pixels to the height to display the control bar
   - in 'MediaBar.java' I added event handlers and listenrs to help interaction with the media player, a 'pause' event method
   a 'video time' listener and a 'Volume' listener
+  
+  26 Sep 2017:
+  - In 'Main.java' added the event handler to open files to choose different file for the player.
